@@ -10,11 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=DM+Serif+Text:ital@0;1&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet" />
     <style>
-      body,
-      html {
+      html, body {
+        height: 100%;
         margin: 0;
         padding: 0;
         font-family: 'Montserrat', sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
       }
 
       .bg-image {
@@ -22,36 +28,65 @@
         background-size: cover;
         background-position: center;
         min-height: 100vh;
-        padding-top: 150px;
-        text-align: center;
         color: #000;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
       }
 
       header {
         display: flex;
         justify-content: center;
-        gap: 20px;
-        padding: 20px;
-        position: fixed;
+        gap: 12px;
+        padding: 15px 10px;
+        position: relative;
         width: 100%;
         top: 0;
         z-index: 1000;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
       }
 
       header a {
         text-decoration: none;
-        padding: 10px 20px;
+        padding: 8px 14px;
         border-radius: 20px;
         background-color: #ffd1dc;
         color: #000;
         font-weight: bold;
-        transition: background-color 0.3s;
+        transition: background-color 0.3s, font-size 0.3s, padding 0.3s;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-shrink: 0;
+        min-width: 80px;
+        max-width: 160px;
+        font-size: 0.9rem;
+        text-align: center;
       }
 
       header a:hover {
         background-color: #ffb6c1;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          justify-content: flex-start;
+          padding-left: 10px;
+        }
+      }
+
+      /* Centering wrapper for exp-container */
+      .center-container {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 0;
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
       }
 
       .exp-container {
@@ -107,17 +142,6 @@
       }
 
       @media (max-width: 576px) {
-        header {
-          gap: 10px;
-          padding: 10px;
-          justify-content: center;
-        }
-
-        header a {
-          padding: 8px 15px;
-          font-size: 0.9rem;
-        }
-
         .exp-container {
           flex-direction: column;
           padding: 20px 10px;
@@ -136,10 +160,6 @@
 
         .exp-card p {
           font-size: 0.9rem;
-        }
-
-        .bg-image {
-          padding-top: 120px;
         }
       }
 
@@ -182,34 +202,36 @@
         <a href="projects.html">Projects</a>
       </header>
 
-      <main class="exp-container">
-        <div
-          class="exp-card"
-          id="cttc"
-          data-bs-toggle="modal"
-          data-bs-target="#expModal"
-        >
-          <img src="images/Unknown.jpg" alt="AI Research Intern" />
-          <h5>AI Research Intern</h5>
-          <p>
-            CTTC Bhubaneswar, Odisha<br /><i>Duration: June 2024 – July 2024</i>
-          </p>
-        </div>
+      <div class="center-container">
+        <main class="exp-container">
+          <div
+            class="exp-card"
+            id="cttc"
+            data-bs-toggle="modal"
+            data-bs-target="#expModal"
+          >
+            <img src="images/Unknown.jpg" alt="AI Research Intern" />
+            <h5>AI Research Intern</h5>
+            <p>
+              CTTC Bhubaneswar, Odisha<br /><i>Duration: June 2024 – July 2024</i>
+            </p>
+          </div>
 
-        <div
-          class="exp-card"
-          id="tads"
-          data-bs-toggle="modal"
-          data-bs-target="#expModal"
-        >
-          <img src="images/girl, yellow, pixel, icon.jpg" alt="Associate" />
-          <h5>Associate</h5>
-          <p>
-            TADS Education, Bhubaneswar, Odisha<br /><i>Duration: June 2024 –
-              July 2024</i>
-          </p>
-        </div>
-      </main>
+          <div
+            class="exp-card"
+            id="tads"
+            data-bs-toggle="modal"
+            data-bs-target="#expModal"
+          >
+            <img src="images/girl, yellow, pixel, icon.jpg" alt="Associate" />
+            <h5>Associate</h5>
+            <p>
+              TADS Education, Bhubaneswar, Odisha<br /><i>Duration: June 2024 –
+                July 2024</i>
+            </p>
+          </div>
+        </main>
+      </div>
     </div>
     <!-- Modal -->
     <div
