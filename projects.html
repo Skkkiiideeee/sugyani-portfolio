@@ -12,30 +12,50 @@
     />
     <style>
       /* Header fixed and styled */
-      header {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        padding: 20px;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-      }
+      
+header {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 10px;
+  position: relative;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: nowrap;  /* prevent wrapping */
+  overflow-x: auto;   /* allow horizontal scroll if needed */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+}
 
-      header a {
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius: 20px;
-        background-color: #ffd1dc;
-        color: #000;
-        font-weight: bold;
-        transition: background-color 0.3s;
-      }
+header a {
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background-color: #ffd1dc;
+  color: #000;
+  font-weight: bold;
+  transition: background-color 0.3s, font-size 0.3s, padding 0.3s;
+  white-space: nowrap;       /* no wrap inside link */
+  overflow: hidden;          /* hide overflow text */
+  text-overflow: ellipsis;   /* add "..." for overflow */
+  flex-shrink: 0;            /* prevent shrinking to keep size */
+  min-width: 80px;           /* reasonable min width */
+  max-width: 160px;          /* max width for links */
+  font-size: 0.9rem;
+  text-align: center;
+}
 
-      header a:hover {
-        background-color: #ffb6c1;
-      }
+header a:hover {
+  background-color: #ffb6c1;
+}
+
+/* Optional: on small screens, allow horizontal scroll */
+@media (max-width: 600px) {
+  header {
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+}
 
       /* Container padding to avoid content under header */
       #projects {
@@ -112,12 +132,6 @@
 
         .card-body {
           padding: 1rem;
-        }
-
-        header {
-          flex-wrap: wrap;
-          gap: 10px;
-          padding: 15px 10px;
         }
       }
     </style>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,40 +15,77 @@
       rel="stylesheet"
     />
     <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+      }
+
       .bg-image {
         background-image: url("images/DreamyDrawings.jpg");
-        height: 100vh;
+        min-height: 100vh;
         background-size: cover;
         background-position: center;
         position: relative;
         color: #000;
         text-align: center;
-        padding-top: 120px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
 
       header {
         display: flex;
         justify-content: center;
-        gap: 20px;
-        padding: 20px;
-        position: fixed;
+        gap: 12px;
+        padding: 15px 10px;
+        position: relative;
         width: 100%;
         top: 0;
         z-index: 1000;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
       }
 
       header a {
         text-decoration: none;
-        padding: 10px 20px;
+        padding: 8px 14px;
         border-radius: 20px;
         background-color: #ffd1dc;
         color: #000;
         font-weight: bold;
-        transition: background-color 0.3s;
+        transition: background-color 0.3s, font-size 0.3s, padding 0.3s;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-shrink: 0;
+        min-width: 80px;
+        max-width: 160px;
+        font-size: 0.9rem;
+        text-align: center;
       }
 
       header a:hover {
         background-color: #ffb6c1;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          justify-content: flex-start;
+          padding-left: 10px;
+        }
+      }
+
+      /* Center the skills cards vertically and horizontally */
+      #skills {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 0; /* allows flexbox to work with min-height: 100vh on parent */
       }
 
       .skill-card {
@@ -85,79 +122,50 @@
         }
       }
 
+      @media (max-width: 768px) {
+        .card-title {
+          font-size: 1.4rem;
+        }
+
+        .card-text {
+          font-size: 0.9rem;
+        }
+
+        .bg-image {
+          padding-top: 80px;
+        }
+      }
+
       @media (max-width: 576px) {
         .row-cols-5 > * {
           width: 100%;
         }
+        .bg-image {
+          padding-top: 40px;
+        }
       }
 
-      #skills {
-  min-height: 100%;
-}
-#skillModal .modal-content{
-    background-color: #efe9ff;
-}
-#skillModal .modal-header {
-    background-color: #ecd4ff;
-}
+      @media (max-width: 480px) {
+        header a {
+          font-size: 0.95rem;
+          padding: 8px 15px;
+        }
 
-/* Existing styles here... */
+        .card-title {
+          font-size: 1.2rem;
+        }
 
-/* Add these media queries for responsiveness */
-@media (max-width: 992px) {
-  .row-cols-5 > * {
-    width: 50%;
-  }
-}
+        .card-text {
+          font-size: 0.85rem;
+        }
+      }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-  }
-
-  header a {
-    width: 80%;
-    text-align: center;
-    font-size: 1rem;
-  }
-
-  .card-title {
-    font-size: 1.4rem;
-  }
-
-  .card-text {
-    font-size: 0.9rem;
-  }
-
-  .bg-image {
-    padding-top: 80px; /* reduce top padding on smaller screens */
-  }
-}
-
-@media (max-width: 576px) {
-  .row-cols-5 > * {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  header a {
-    font-size: 0.95rem;
-    padding: 8px 15px;
-  }
-
-  .card-title {
-    font-size: 1.2rem;
-  }
-
-  .card-text {
-    font-size: 0.85rem;
-  }
-}
-
-
+      #skillModal .modal-content{
+          background-color: #efe9ff;
+      }
+      #skillModal .modal-header {
+          background-color: #ecd4ff;
+      }
     </style>
   </head>
   <body>
@@ -166,11 +174,11 @@
         <a href="about.html">About Me</a>
         <a href="index.html">Go Back</a>
         <a href="experience.html">Experience</a>
-    <a href="projects.html">Projects</a>
+        <a href="projects.html">Projects</a>
       </header>
 
-      <section class="container d-flex align-items-center justify-content-center" id="skills">
-        <div class="row row-cols-1 row-cols-md-5 g-4 justify-content-center">
+      <section class="container" id="skills">
+        <div class="row row-cols-1 row-cols-md-5 g-4 justify-content-center w-100">
           <div class="col">
             <div
               class="card h-100 shadow-sm skill-card"
@@ -200,7 +208,6 @@
                 <p class="card-text mb-0">Languages & Technologies: HTML/CSS (structured portfolio layouts)</p>
                 <br>
                 <img src="images/IMG_7895 2.jpg" class="card-img-bottom img-fluid mt-2" alt="AIML Image" style="max-height: 200px; max-width: 200px; object-fit: cover;">
-
               </div>
             </div>
           </div>
@@ -216,8 +223,7 @@
                 <h5 class="card-title fw-bold">Backend Development</h5>
                 <p class="card-text mb-0">Languages & Frameworks: Java (core language for Spring Boot projects)</p>
                 <br>
-                 <img src="images/IMG_7895 3.jpg" class="card-img-bottom img-fluid mt-2" alt="AIML Image" style="max-height: 200px; max-width: 200px; object-fit: cover;">
-
+                <img src="images/IMG_7895 3.jpg" class="card-img-bottom img-fluid mt-2" alt="AIML Image" style="max-height: 200px; max-width: 200px; object-fit: cover;">
               </div>
             </div>
           </div>
@@ -233,8 +239,7 @@
                 <h5 class="card-title fw-bold">Software Dev & Tools</h5>
                 <p class="card-text mb-0">Concepts: OOP (applied in Java and Python projects)</p>
                 <br><br>
-                <img src="images/IMG_7896.jpg" class="card-img-bottom img-fluid mt-2" alt="AIML Image" style="max-height: 200px; max-width: 200px;; object-fit: cover;">
-
+                <img src="images/IMG_7896.jpg" class="card-img-bottom img-fluid mt-2" alt="AIML Image" style="max-height: 200px; max-width: 200px; object-fit: cover;">
               </div>
             </div>
           </div>
@@ -250,8 +255,8 @@
                 <h5 class="card-title fw-bold">Soft <br>Skills</h5>
                 <p class="card-text mb-0">
                   Key Strengths: Problem-Solving, Attention to Detail, Team Collaboration, Design Thinking, Visual Storytelling
-                <br>
-                 <img src="images/IMG_7895 4.jpg" class="card-img-bottom img-fluid mt-2" alt="AIML Image" style="max-height: 200px; max-width: 200px;; object-fit: cover;">
+                </p>
+                <img src="images/IMG_7895 4.jpg" class="card-img-bottom img-fluid mt-2" alt="AIML Image" style="max-height: 200px; max-width: 200px; object-fit: cover;">
               </div>
             </div>
           </div>
