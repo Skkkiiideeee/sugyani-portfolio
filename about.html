@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About - Sugyani</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -15,6 +15,8 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     header {
@@ -26,6 +28,7 @@
       width: 100%;
       top: 0;
       z-index: 1000;
+      flex-wrap: wrap;
     }
 
     header a {
@@ -36,6 +39,7 @@
       color: #000;
       font-weight: bold;
       transition: background-color 0.3s;
+      white-space: nowrap;
     }
 
     header a:hover {
@@ -47,6 +51,8 @@
       justify-content: center;
       align-items: center;
       padding: 160px 20px 60px;
+      min-height: 100vh;
+      box-sizing: border-box;
     }
 
     .about-box {
@@ -58,6 +64,12 @@
       max-width: 1100px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       flex-wrap: wrap;
+      box-sizing: border-box;
+    }
+
+    .profile-pic {
+      flex: 0 0 160px;
+      text-align: center;
     }
 
     .profile-pic img {
@@ -65,9 +77,38 @@
       height: 200px;
       border-radius: 10px;
       object-fit: cover;
+      display: block;
+      margin: 0 auto 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .social-icons {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a img {
+      width: 28px;
+      height: 28px;
+      transition: filter 0.3s ease, transform 0.3s ease;
+      display: block;
+    }
+
+    .social-icons a:hover img {
+      filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(310deg) saturate(5);
+      transform: scale(1.1);
     }
 
     .about-text {
+      flex: 1 1 400px;
       max-width: 700px;
     }
 
@@ -76,27 +117,22 @@
       font-size: 2.5rem;
       line-height: 1.2;
       margin: 0;
+      color: #222;
     }
 
     .about-text p {
       margin-top: 20px;
-      font-size: 1rem;
+      font-size: 1.05rem;
       line-height: 1.7;
       color: #333;
+      font-weight: 400;
     }
 
-    .social-icons {
-      margin-top: 25px;
-    }
-
-    .social-icons a {
-      margin-right: 15px;
-      display: inline-block;
-    }
-
-    .social-icons img {
-      width: 28px;
-      height: 28px;
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .about-box {
+        padding: 30px 25px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -104,6 +140,17 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 25px 20px;
+      }
+
+      .profile-pic {
+        flex: none;
+        margin-bottom: 25px;
+      }
+
+      .profile-pic img {
+        width: 140px;
+        height: 180px;
       }
 
       .about-text {
@@ -113,16 +160,45 @@
       .about-text h1 {
         font-size: 2rem;
       }
+
+      .about-text p {
+        font-size: 1rem;
+      }
     }
-    .social-icons a img {
-  transition: filter 0.3s ease, transform 0.3s ease;
-}
 
-.social-icons a:hover img {
-  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(310deg) saturate(5);
-}
+    @media (max-width: 480px) {
+      header {
+        gap: 10px;
+        padding: 15px 10px;
+      }
 
+      header a {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+      }
 
+      .profile-pic img {
+        width: 120px;
+        height: 160px;
+      }
+
+      .about-text h1 {
+        font-size: 1.7rem;
+      }
+
+      .about-text p {
+        font-size: 0.95rem;
+      }
+
+      .social-icons {
+        gap: 12px;
+      }
+
+      .social-icons a img {
+        width: 24px;
+        height: 24px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -130,29 +206,48 @@
     <a href="index.html">Go Back</a>
     <a href="skills.html">Skills</a>
     <a href="experience.html">Experience</a>
-    <a href="#projects">Projects</a>
+    <a href="projects.html">Projects</a>
   </header>
 
   <div class="container">
     <div class="about-box">
       <div class="profile-pic">
-        <img src="images/me.heic" alt="Sugyani Photo">
-         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/sugyani-krishnadarsinee/" target="_blank">
-            <img src="images/linkedin.png" alt="LinkedIn">
+        <img src="images/me.heic" alt="Sugyani Photo" />
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/sugyani-krishnadarsinee/" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn" />
           </a>
-          <a href="https://github.com/skkkiiideeee" target="_blank">
-            <img src="images/github-logo.png" alt="GitHub">
+          <a href="https://github.com/skkkiiideeee" target="_blank" aria-label="GitHub">
+            <img src="images/github-logo.png" alt="GitHub" />
           </a>
-          <a href="edu.html" target="_blank">
-            <img src="images/study.png" alt="Education & certification">
+          <a href="edu.html" target="_blank" aria-label="Education & Certification">
+            <img src="images/study.png" alt="Education & certification" />
           </a>
         </div>
       </div>
       <div class="about-text">
-        <h1>HELLO<br>I AM SUGYANI</h1>
-        <p>I’m Sugyani Krishnadarsinee, a 3rd-year B.Tech CSE student at KIIT DU, Bhubaneswar, with a CGPA of 8.09, deeply passionate about AI/ML, computer vision, and full-stack development. I’ve developed impactful projects like the Automated Rotten Fruit Detection System (92.3% accuracy using ResNet50) and a Real-Time Facial Recognition System (95% accuracy with OpenCV and Keras), focusing on robotics and autonomous navigation. I also built a Construction Site Safety Detection System using YOLOv8, achieving 90% accuracy in real-time safety equipment detection.</p>
-        <p>Recently, I expanded into full-stack development by creating a Spring Boot-based Library Management System with MongoDB, deployed via Docker Compose, showcasing my ability to build scalable web applications. I’m proficient in Python, Java, C++, and tools like TensorFlow, OpenCV, and Docker, with certifications in Machine Learning and Deep Learning from Coursera (Stanford University). Driven to innovate at the intersection of AI and software engineering, I’m eager to contribute to cutting-edge projects and grow as a versatile developer.</p>
+        <h1>HELLO<br />I AM SUGYANI</h1>
+        <p>
+          I’m Sugyani Krishnadarsinee, a 3rd-year B.Tech CSE student at KIIT DU,
+          Bhubaneswar, with a CGPA of 8.09, deeply passionate about AI/ML,
+          computer vision, and full-stack development. I’ve developed impactful
+          projects like the Automated Rotten Fruit Detection System (92.3%
+          accuracy using ResNet50) and a Real-Time Facial Recognition System (95%
+          accuracy with OpenCV and Keras), focusing on robotics and autonomous
+          navigation. I also built a Construction Site Safety Detection System
+          using YOLOv8, achieving 90% accuracy in real-time safety equipment
+          detection.
+        </p>
+        <p>
+          Recently, I expanded into full-stack development by creating a Spring
+          Boot-based Library Management System with MongoDB, deployed via Docker
+          Compose, showcasing my ability to build scalable web applications. I’m
+          proficient in Python, Java, C++, and tools like TensorFlow, OpenCV, and
+          Docker, with certifications in Machine Learning and Deep Learning from
+          Coursera (Stanford University). Driven to innovate at the intersection
+          of AI and software engineering, I’m eager to contribute to cutting-edge
+          projects and grow as a versatile developer.
+        </p>
       </div>
     </div>
   </div>

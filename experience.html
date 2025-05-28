@@ -6,11 +6,12 @@
     <title>Experience</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Birthstone&family=DM+Serif+Text:ital@0;1&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=DM+Serif+Text:ital@0;1&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet" />
     <style>
-      body, html {
+      body,
+      html {
         margin: 0;
         padding: 0;
         font-family: 'Montserrat', sans-serif;
@@ -25,7 +26,7 @@
         text-align: center;
         color: #000;
       }
-      
+
       header {
         display: flex;
         justify-content: center;
@@ -35,6 +36,7 @@
         width: 100%;
         top: 0;
         z-index: 1000;
+        flex-wrap: wrap;
       }
 
       header a {
@@ -45,6 +47,7 @@
         color: #000;
         font-weight: bold;
         transition: background-color 0.3s;
+        white-space: nowrap;
       }
 
       header a:hover {
@@ -57,17 +60,21 @@
         flex-wrap: wrap;
         gap: 40px;
         padding: 40px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
       }
 
       .exp-card {
-        background-color: #DB627D;
-        color: #FFF4F4;
+        background-color: #db627d;
+        color: #fff4f4;
         border-radius: 25px;
         padding: 15px;
         width: 400px;
+        max-width: 90vw;
         text-align: center;
         box-shadow: 0 0 16px rgba(255, 105, 135, 0.25);
         transition: transform 0.2s ease, box-shadow 0.2s ease;
+        cursor: pointer;
       }
 
       .exp-card:hover {
@@ -82,32 +89,87 @@
       }
 
       .exp-card h5 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: bold;
         margin-top: 15px;
       }
 
       .exp-card p {
         margin: 5px 0 0;
-        font-size: 0.95rem;
-        color: #333;
+        font-size: 1rem;
+        color: #fff4f4cc;
       }
 
-      @media (max-width: 768px) {
-        .exp-container {
-          flex-direction: column;
-          align-items: center;
+      @media (max-width: 992px) {
+        .exp-card {
+          width: 350px;
         }
       }
-      #exp {
-  min-height: 100%;
-}
-#expModal .modal-content{
-    background-color: #e9f5ff;
-}
-#expModal .modal-header {
-    background-color: #d4e7ff;
-}
+
+      @media (max-width: 576px) {
+        header {
+          gap: 10px;
+          padding: 10px;
+          justify-content: center;
+        }
+
+        header a {
+          padding: 8px 15px;
+          font-size: 0.9rem;
+        }
+
+        .exp-container {
+          flex-direction: column;
+          padding: 20px 10px;
+          gap: 25px;
+        }
+
+        .exp-card {
+          width: 100%;
+          max-width: 100%;
+          padding: 20px;
+        }
+
+        .exp-card h5 {
+          font-size: 1.2rem;
+        }
+
+        .exp-card p {
+          font-size: 0.9rem;
+        }
+
+        .bg-image {
+          padding-top: 120px;
+        }
+      }
+
+      /* Modal tweaks */
+      #expModal .modal-content {
+        background-color: #e9f5ff;
+      }
+
+      #expModal .modal-header {
+        background-color: #d4e7ff;
+      }
+
+      @media (max-width: 576px) {
+        #expModal .modal-dialog {
+          margin: 1rem;
+          max-width: 95vw;
+        }
+
+        #expModal .modal-content {
+          padding: 15px;
+        }
+
+        #expModal .modal-body {
+          font-size: 0.9rem;
+        }
+
+        #expModal .modal-title {
+          font-size: 1.4rem;
+        }
+      }
     </style>
   </head>
 
@@ -117,22 +179,35 @@
         <a href="about.html">About Me</a>
         <a href="skills.html">Skills</a>
         <a href="index.html">Go Back</a>
-    <a href="projects.html">Projects</a>
+        <a href="projects.html">Projects</a>
       </header>
 
       <main class="exp-container">
-        <div class="exp-card" id="cttc"data-bs-toggle="modal"
-              data-bs-target="#expModal">
+        <div
+          class="exp-card"
+          id="cttc"
+          data-bs-toggle="modal"
+          data-bs-target="#expModal"
+        >
           <img src="images/Unknown.jpg" alt="AI Research Intern" />
           <h5>AI Research Intern</h5>
-          <p>CTTC Bhubaneswar, Odisha<br><i>Duration: June 2024 – July 2024</i></p>
+          <p>
+            CTTC Bhubaneswar, Odisha<br /><i>Duration: June 2024 – July 2024</i>
+          </p>
         </div>
 
-        <div class="exp-card" id="tads"data-bs-toggle="modal"
-              data-bs-target="#expModal">
+        <div
+          class="exp-card"
+          id="tads"
+          data-bs-toggle="modal"
+          data-bs-target="#expModal"
+        >
           <img src="images/girl, yellow, pixel, icon.jpg" alt="Associate" />
           <h5>Associate</h5>
-          <p>TADS Education, Bhubaneswar, Odisha<br><i>Duration: June 2024 – July 2024</i></p>
+          <p>
+            TADS Education, Bhubaneswar, Odisha<br /><i>Duration: June 2024 –
+              July 2024</i>
+          </p>
         </div>
       </main>
     </div>
