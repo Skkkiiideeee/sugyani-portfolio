@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Sugyani</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff5f8;
+      background-image: url('images/pinkstars.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header a {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      background-color: #ffd1dc;
+      color: #000;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    header a:hover {
+      background-color: #ffb6c1;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 160px 20px 60px;
+    }
+
+    .about-box {
+      background-color: #ffe5ee;
+      border-radius: 30px;
+      padding: 40px;
+      display: flex;
+      gap: 40px;
+      max-width: 1100px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
+    }
+
+    .profile-pic img {
+      width: 160px;
+      height: 200px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .about-text {
+      max-width: 700px;
+    }
+
+    .about-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .about-text p {
+      margin-top: 20px;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .social-icons {
+      margin-top: 25px;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+      display: inline-block;
+    }
+
+    .social-icons img {
+      width: 28px;
+      height: 28px;
+    }
+
+    @media (max-width: 768px) {
+      .about-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .about-text {
+        max-width: 100%;
+      }
+
+      .about-text h1 {
+        font-size: 2rem;
+      }
+    }
+    .social-icons a img {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(310deg) saturate(5);
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">Go Back</a>
+    <a href="skills.html">Skills</a>
+    <a href="experience.html">Experience</a>
+    <a href="#projects">Projects</a>
+  </header>
+
+  <div class="container">
+    <div class="about-box">
+      <div class="profile-pic">
+        <img src="images/me.heic" alt="Sugyani Photo">
+         <div class="social-icons">
+          <a href="https://www.linkedin.com/in/sugyani-krishnadarsinee/" target="_blank">
+            <img src="images/linkedin.png" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/skkkiiideeee" target="_blank">
+            <img src="images/github-logo.png" alt="GitHub">
+          </a>
+          <a href="edu.html" target="_blank">
+            <img src="images/study.png" alt="Education & certification">
+          </a>
+        </div>
+      </div>
+      <div class="about-text">
+        <h1>HELLO<br>I AM SUGYANI</h1>
+        <p>I’m Sugyani Krishnadarsinee, a 3rd-year B.Tech CSE student at KIIT DU, Bhubaneswar, with a CGPA of 8.09, deeply passionate about AI/ML, computer vision, and full-stack development. I’ve developed impactful projects like the Automated Rotten Fruit Detection System (92.3% accuracy using ResNet50) and a Real-Time Facial Recognition System (95% accuracy with OpenCV and Keras), focusing on robotics and autonomous navigation. I also built a Construction Site Safety Detection System using YOLOv8, achieving 90% accuracy in real-time safety equipment detection.</p>
+        <p>Recently, I expanded into full-stack development by creating a Spring Boot-based Library Management System with MongoDB, deployed via Docker Compose, showcasing my ability to build scalable web applications. I’m proficient in Python, Java, C++, and tools like TensorFlow, OpenCV, and Docker, with certifications in Machine Learning and Deep Learning from Coursera (Stanford University). Driven to innovate at the intersection of AI and software engineering, I’m eager to contribute to cutting-edge projects and grow as a versatile developer.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

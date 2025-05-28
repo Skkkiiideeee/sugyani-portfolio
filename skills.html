@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .bg-image {
+        background-image: url("images/DreamyDrawings.jpg");
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        color: #000;
+        text-align: center;
+        padding-top: 120px;
+      }
+
+      header {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      header a {
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        background-color: #ffd1dc;
+        color: #000;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      header a:hover {
+        background-color: #ffb6c1;
+      }
+
+      .skill-card {
+        border-radius: 1rem;
+        transition: box-shadow 0.2s, transform 0.2s;
+        background: #fad2dd;
+        cursor: pointer;
+      }
+
+      .skill-card:hover {
+        box-shadow: 0 0 24px 0 #f6036455;
+        transform: translateY(-2px) scale(1.02);
+      }
+
+      .card-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .card-text {
+        font-size: 1rem;
+        color: #555;
+      }
+
+      .row-cols-5 > * {
+        flex: 0 0 auto;
+        width: 20%;
+      }
+
+      @media (max-width: 992px) {
+        .row-cols-5 > * {
+          width: 50%;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .row-cols-5 > * {
+          width: 100%;
+        }
+      }
+
+      #skills {
+  min-height: 100%;
+}
+#skillModal .modal-content{
+    background-color: #efe9ff;
+}
+#skillModal .modal-header {
+    background-color: #ecd4ff;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="bg-image">
+      <header>
+        <a href="about.html">About Me</a>
+        <a href="index.html">Go Back</a>
+        <a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a>
+      </header>
+
+      <section class="container d-flex align-items-center justify-content-center" id="skills">
+        <div class="row row-cols-1 row-cols-md-5 g-4 justify-content-center">
+          <div class="col">
+            <div
+              class="card h-100 shadow-sm skill-card"
+              id="aiml-card"
+              data-bs-toggle="modal"
+              data-bs-target="#skillModal"
+            >
+              <div class="card-body">
+                <h5 class="card-title fw-bold">AIML & Robotics</h5>
+                <p class="card-text mb-0">
+                  Programming Languages: Python (used in projects like Real-Time Facial Recognition System )
+                </p>
+                <img src="images/IMG_7895.jpg" class="card-img-bottom img-fluid mt-2" alt="AIML Image" style="max-height: 200px; max-width: 200px; object-fit: cover;">
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="card h-100 shadow-sm skill-card"
+              id="frontend-card"
+              data-bs-toggle="modal"
+              data-bs-target="#skillModal"
+            >
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Frontend Development</h5>
+                <p class="card-text mb-0">Languages & Technologies: HTML/CSS (structured portfolio layouts)</p>
+                <br>
+                <img src="images/IMG_7895 2.jpg" class="card-img-bottom img-fluid mt-2" alt="AIML Image" style="max-height: 200px; max-width: 200px; object-fit: cover;">
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="card h-100 shadow-sm skill-card"
+              id="backend-card"
+              data-bs-toggle="modal"
+              data-bs-target="#skillModal"
+            >
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Backend Development</h5>
+                <p class="card-text mb-0">Languages & Frameworks: Java (core language for Spring Boot projects)</p>
+                <br>
+                 <img src="images/IMG_7895 3.jpg" class="card-img-bottom img-fluid mt-2" alt="AIML Image" style="max-height: 200px; max-width: 200px; object-fit: cover;">
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="card h-100 shadow-sm skill-card"
+              id="software-card"
+              data-bs-toggle="modal"
+              data-bs-target="#skillModal"
+            >
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Software Dev & Tools</h5>
+                <p class="card-text mb-0">Concepts: OOP (applied in Java and Python projects)</p>
+                <br><br>
+                <img src="images/IMG_7896.jpg" class="card-img-bottom img-fluid mt-2" alt="AIML Image" style="max-height: 200px; max-width: 200px;; object-fit: cover;">
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="card h-100 shadow-sm skill-card"
+              id="softskills-card"
+              data-bs-toggle="modal"
+              data-bs-target="#skillModal"
+            >
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Soft <br>Skills</h5>
+                <p class="card-text mb-0">
+                  Key Strengths: Problem-Solving, Attention to Detail, Team Collaboration, Design Thinking, Visual Storytelling
+                <br>
+                 <img src="images/IMG_7895 4.jpg" class="card-img-bottom img-fluid mt-2" alt="AIML Image" style="max-height: 200px; max-width: 200px;; object-fit: cover;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="skillModal"
+      tabindex="-1"
+      aria-labelledby="skillModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="skillModalLabel"></h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="skillModalBody">
+            <!-- Content will be injected here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

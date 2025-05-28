@@ -1,0 +1,86 @@
+.card {
+  max-width: 40em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* optional for style */
+  margin: 1em auto; /* optional centering */
+  background-color: #fed9e6;
+    transition: transform 0.3s ease;
+
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.card img.card-image {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+  padding: 0.5em;
+}
+
+.card-body {
+  flex: 1;
+  padding: 1em;
+}
+#projects{
+    padding-top: 2em;
+    padding-bottom: 5em;
+}
+
+header {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      header a {
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        background-color: #ffd1dc;
+        color: #000;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      header a:hover {
+        background-color: #ffb6c1;
+      }
+
+.bg-image {
+        background-image: url("images/\ -62.jpg");
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        color: #000;
+        text-align: center;
+        padding-top: 120px;
+      }
+.btn{
+  background-color: #cf6689;
+  border-color: #000;
+}
+.btn:hover{
+  background-color: #efb1c6;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card img.card-image {
+    width: 100%;
+  }
+}

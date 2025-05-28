@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Construction Site Safety Detection</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .project-header {
+      background: #ffd1dc;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .tech-stack {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-top: 1rem;
+    }
+    .section-heading {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #b34d6d;
+    }
+    .btn-custom {
+      background-color: #cf6689;
+      border: none;
+    }
+    .btn-custom:hover {
+      background-color: #efb1c6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+
+     <div class="project-header text-center">
+      <h1 class="mb-3">Construction Site Safety Detection System</h1>
+      <p class="lead">A AIML project built on YOLOv8</p>
+      <div class="mt-3">
+        <a href="https://github.com/Skkkiiideeee/library-docker" class="icon-link" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://hub.docker.com/repository/docker/skkkiiideeee/a-library-website" class="icon-link" target="_blank">
+          <i class="fab fa-docker"></i>
+        </a>
+      </div>
+    </div>
+            <div class="row align-items-stretch">
+        <!-- Image Column -->
+        <div class="col-md-6 mb-3 mb-md-0">
+          <img src="images/Unknown-2.png" alt="construction-safety" class="img-fluid rounded shadow w-100 h-100 object-fit-cover">
+        </div>
+
+        <!-- Tech Stack Column -->
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+          <h2 class="section-heading">Tech Stack</h2>
+          <p>Python, OpenCV, TensorFlow, Keras, YOLOv5</p>
+          <h2 class="section-heading">Tools</h2>
+      <p>Google Colab, Jupyter Notebook</p>
+        </div>
+      </div>
+    <div class="tech-stack">
+      <h2 class="section-heading">Summary</h2>
+      <p>
+        This project focuses on enhancing safety at construction sites by leveraging computer vision and deep learning techniques. Using YOLOv5, the system is trained to accurately detect the presence of essential safety gear such as helmets and vests, as well as identify unauthorized personnel in restricted areas. The dataset was carefully curated and augmented to ensure robustness across diverse site conditions, resulting in a model that achieves over <strong>91% accuracy</strong> in controlled tests. While real-time detection via live camera feeds is a planned enhancement, the current implementation processes images and pre-recorded videos, laying a strong foundation for scalable, automated safety monitoring. The solution is designed to be modular and extensible, making it suitable for integration with IoT devices and web-based dashboards in future iterations.
+      </p>
+      <ul>
+        <li>Trained on a comprehensive safety gear dataset with advanced augmentation for real-world variability.</li>
+        <li>Achieved high detection accuracy for helmets, vests, and unauthorized access in test environments.</li>
+        <li>Implemented with YOLOv5 for fast and efficient object detection.</li>
+        <li>Current system supports batch processing of images and videos; real-time detection is planned for upcoming releases.</li>
+        <li>Code and models are portable for deployment on cloud or edge devices.</li>
+      </ul>
+    </div>
+
+    <div class="tech-stack">
+      <h2 class="section-heading">Future Prospects & Enhancements</h2>
+      <p>
+        The Construction Site Safety Detection system is architected for future scalability and feature expansion. Planned enhancements include:
+      </p>
+      <ul>
+        <li><strong>Real-Time Detection:</strong> Integrate live camera feed processing for instant safety compliance monitoring on active sites.</li>
+        <li><strong>Automated Alert System:</strong> Trigger immediate notifications (SMS, email, or app alerts) to supervisors when safety violations or unauthorized access are detected.</li>
+        <li><strong>Hard Hat and Vest Color Classification:</strong> Distinguish between different worker roles based on gear color for advanced analytics and compliance tracking.</li>
+        <li><strong>Facial Recognition Integration:</strong> Identify and log authorized personnel, further reducing the risk of unauthorized access.</li>
+        <li><strong>Web Dashboard & Analytics:</strong> Visualize safety incidents, compliance rates, and trends with interactive charts and reports.</li>
+        <li><strong>Edge Deployment:</strong> Optimize models for deployment on low-power edge devices such as Raspberry Pi or NVIDIA Jetson for on-site processing.</li>
+        <li><strong>Multi-Camera Support:</strong> Monitor large construction sites by aggregating feeds from multiple cameras.</li>
+        <li><strong>Integration with Site Access Control:</strong> Automate gates or turnstiles based on detection results for seamless site management.</li>
+      </ul>
+
+      <h2 class="section-heading">Potential Use Cases</h2>
+      <ul>
+        <li><strong>Construction Companies:</strong> Automate safety compliance checks and reduce manual supervision costs.</li>
+        <li><strong>Industrial Plants:</strong> Monitor PPE (Personal Protective Equipment) adherence in hazardous environments.</li>
+        <li><strong>Event Venues or Restricted Zones:</strong> Prevent unauthorized access and ensure safety regulations are followed.</li>
+        <li><strong>Government Safety Audits:</strong> Provide verifiable data for regulatory compliance and reporting.</li>
+      </ul>
+
+      <h2 class="section-heading">Broader Impact</h2>
+      <ul>
+        <li><strong>Reduce Workplace Accidents:</strong> Proactively identify safety violations to minimize injuries and fatalities.</li>
+        <li><strong>Promote AI Adoption in Construction:</strong> Demonstrate practical benefits of AI in traditional industries.</li>
+        <li><strong>Empower Safety Officers:</strong> Free up human resources for higher-level safety planning and response.</li>
+        <li><strong>Open Source Collaboration:</strong> Encourage contributions from the global developer and safety community.</li>
+      </ul>
+
+      <h2 class="section-heading">Deployment & DevOps Readiness</h2>
+      <ul>
+        <li><strong>Containerization (Planned):</strong> Package the detection system in Docker containers for easy deployment across environments.</li>
+        <li><strong>CI/CD Pipeline (Planned):</strong> Automate testing and deployment workflows using GitHub Actions or Jenkins.</li>
+        <li><strong>Cloud & Edge Compatibility:</strong> Design supports both centralized cloud processing and local edge deployments.</li>
+      </ul>
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="projects.html" class="btn btn-custom px-4 py-2">← Back to Projects</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sugyani Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .bg-image {
+      background-image: url('images/background.jpg'); /* Replace with your image URL or path */
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: #000;
+      text-align: center;
+    }
+
+    .center-text {
+      position: absolute;
+      top: 40%; /* Moved up slightly from 50% */
+      left: 50%;
+      transform: translate(-50%, -40%);
+    }
+
+    .title {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+    }
+
+    .clickable-name {
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+
+    header {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    header a {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      background-color: #ffd1dc;
+      color: #000;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    header a:hover {
+      background-color: #ffb6c1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background + Center Content -->
+  <div class="bg-image">
+    <div class="center-text">
+      <div class="subtitle">Hii, Welcome to my page! I am </div>
+      <div class="title clickable-name" onclick="window.location.href='index.html'">
+        SUGYANI<br>KRISHNADARSINEE
+      </div>
+      <div class="subtitle">A Computer Science and Engineering Student</div>
+
+      <!-- Moved header here -->
+      <header>
+        <a href="about.html">About Me</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+      </header>
+    </div>
+  </div>
+</body>
+</html>

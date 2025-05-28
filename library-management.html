@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library Management System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .project-header {
+      background: #ffd1dc;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    .tech-stack {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-top: 1rem;
+    }
+    .section-heading {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #b34d6d;
+    }
+    .btn-custom {
+      background-color: #cf6689;
+      border: none;
+    }
+    .btn-custom:hover {
+      background-color: #efb1c6;
+    }
+    .icon-link {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      color: #000;
+    }
+    .icon-link:hover {
+      color: #cf6689;
+    }
+    .samplepage img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .object-fit-cover {
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <div class="project-header text-center">
+      <h1 class="mb-3">📚 Library Management System</h1>
+      <p class="lead">A full-stack application for managing library books efficiently using modern tools and containerized environments.</p>
+      <div class="mt-3">
+        <a href="https://github.com/Skkkiiideeee/library-docker" class="icon-link" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://hub.docker.com/repository/docker/skkkiiideeee/a-library-website" class="icon-link" target="_blank">
+          <i class="fab fa-docker"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row align-items-stretch">
+        <!-- Image Column -->
+        <div class="col-md-6 mb-3 mb-md-0">
+          <img src="images/Screenshot 2025-05-25 at 1.31.00 AM.png" alt="Library Management System Screenshot" class="img-fluid rounded shadow w-100 h-100 object-fit-cover">
+        </div>
+
+        <!-- Tech Stack Column -->
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+          <h2 class="section-heading">Tech Stack</h2>
+          <p>Spring Boot, MongoDB, HTML/CSS/JavaScript, Docker, Docker Compose</p>
+        </div>
+      </div>
+
+      <!-- Summary Section in a Box -->
+      <div class="tech-stack mt-4">
+        <h2 class="section-heading">Summary</h2>
+        <p>
+          Designed and deployed a scalable full-stack <strong>Library Management System</strong> capable of performing CRUD operations on books with a focus on modularity and maintainability. The backend is built using <strong>Spring Boot</strong>, exposing a RESTful API for client-side consumption, while the frontend is designed for responsiveness and ease of use.
+        </p>
+        <ul>
+          <li>Containerized both frontend and backend using <strong>Docker</strong> for consistent development and deployment environments.</li>
+          <li>Used <strong>Docker Compose</strong> to orchestrate multi-container services including MongoDB, backend API, and static frontend hosting.</li>
+          <li>Configured <strong>MongoDB volumes and initialization scripts</strong> to ensure persistent data storage and automated schema seeding.</li>
+          <li>Deployed the backend Docker image to <strong>Docker Hub</strong>, enabling rapid deployment on any cloud or local environment.</li>
+          <li>Utilized <strong>RESTful design principles</strong> for clean API architecture supporting future feature integrations like authentication and analytics.</li>
+          <li>Ensured separation of concerns between services, allowing independent scaling and debugging of components.</li>
+          <li>Integrated <strong>Bootstrap</strong> and modern CSS practices to deliver a polished and responsive user interface.</li>
+          <li>Adopted <strong>environment-based configuration</strong> for seamless transitions between development, staging, and production setups.</li>
+        </ul>
+      </div>
+
+      <!-- Future Prospects & Enhancements -->
+      <div class="tech-stack">
+        <h2 class="section-heading">Future Prospects & Enhancements</h2>
+        <p>This Library Management System has been architected with scalability and modularity in mind. While the current version supports essential book-related CRUD operations, several high-impact features are planned for future releases:</p>
+        <ul>
+          <li><strong>User Authentication & Role Management:</strong> Secure login/signup with role-based access (Admin, Librarian, Member) using Spring Security and JWT.</li>
+          <li><strong>AI-Powered Book Recommendation System:</strong> Using machine learning models trained on user behavior and borrowing history to suggest relevant books.</li>
+          <li><strong>Analytics Dashboard:</strong> Visualize key metrics like popular books, late returns, user activity, and borrowing trends using interactive graphs and charts.</li>
+          <li><strong>Notifications & Alerts:</strong> Email or SMS alerts for due dates, new arrivals, and membership updates using APIs like Twilio or Firebase.</li>
+          <li><strong>Barcode Integration:</strong> Enable faster check-ins/check-outs via barcode scanning using a camera or hardware scanner.</li>
+          <li><strong>Progressive Web App (PWA):</strong> Making the app installable and usable offline, perfect for institutions in low-connectivity areas.</li>
+        </ul>
+
+        <h2 class="section-heading">Potential Use Cases</h2>
+        <ul>
+          <li><strong>Schools & Colleges:</strong> Manage textbooks, issue history, and overdue penalties.</li>
+          <li><strong>Community Libraries:</strong> Track memberships, automate cataloging, and streamline borrowing.</li>
+          <li><strong>Corporate Resource Centers:</strong> Organize digital and physical learning materials for employee upskilling.</li>
+          <li><strong>Private Collections:</strong> Hobbyist book collectors or professors maintaining personal archives.</li>
+        </ul>
+
+        <h2 class="section-heading">Broader Impact</h2>
+        <ul>
+          <li><strong>Democratize Access to Technology:</strong> Help underfunded institutions manage resources effectively without expensive proprietary software.</li>
+          <li><strong>Encourage AI Adoption in EdTech:</strong> Show how AI can be applied meaningfully in everyday academic settings.</li>
+          <li><strong>Foster Developer Growth:</strong> Allow developers to fork and contribute, promoting real-world collaboration.</li>
+        </ul>
+
+        <h2 class="section-heading">Deployment & DevOps Readiness</h2>
+        <ul>
+          <li><strong>Containerized Microservices:</strong> Each service is Dockerized for ease of deployment and consistency across environments.</li>
+          <li><strong>CI/CD Pipeline (Planned):</strong> Automate testing and deployment workflows using GitHub Actions or Jenkins.</li>
+          <li><strong>Kubernetes Readiness:</strong> Designed to scale horizontally in container orchestration platforms like Kubernetes.</li>
+        </ul>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="projects.html" class="btn btn-custom px-4 py-2">← Back to Projects</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
