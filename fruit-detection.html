@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Facial Recognition System</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
   <style>
     body {
       background-color: #fff0f5;
@@ -43,14 +45,11 @@
 <body>
   <div class="container my-5">
     <div class="project-header text-center">
-      <h1 class="mb-3">🧑‍💻 Facial Recognition System</h1>
-      <p class="lead">AIML model to predict whether a fruit is fresh or Rotten</p>
+      <h1 class="mb-3">Automated fresh or rotten fruit detection system</h1>
+      <p class="lead">A deep learning-based image classification model to detect fresh vs rotten fruits using ResNet50. The model can classify fruit images into fresh or rotten categories, providing real-time classification when integrated into an Android application.</p>
       <div class="mt-3">
-        <a href="https://github.com/Skkkiiideeee/library-docker" class="icon-link" target="_blank">
+        <a href="https://github.com/Skkkiiideeee/Fruit-Detection-3fruits-" class="icon-link" target="_blank">
           <i class="fab fa-github"></i>
-        </a>
-        <a href="https://hub.docker.com/repository/docker/skkkiiideeee/a-library-website" class="icon-link" target="_blank">
-          <i class="fab fa-docker"></i>
         </a>
       </div>
     </div>
@@ -82,53 +81,54 @@
     <div class="tech-stack">
       <h2 class="section-heading">Summary</h2>
       <p>
-        This project delivers a robust, real-time facial recognition system designed for accuracy and efficiency in diverse conditions. By integrating OpenCV's Haar Cascade for rapid face detection with a custom-trained Convolutional Neural Network (CNN), the system achieves <strong>95% recognition accuracy</strong> across varying lighting environments. Optimizations in data preprocessing and model architecture reduced processing overhead by 15% during live tests, allowing for smooth operation on standard hardware. The solution is modular, enabling easy adaptation for different datasets and deployment scenarios, and is suitable for both security and user authentication applications.
+        This project presents an advanced computer vision solution for automated fruit quality assessment. Leveraging a ResNet50-based Convolutional Neural Network, the system classifies fruits as "rotten" or "fresh" to support robotic sorting in industrial environments. The model was trained on two datasets (3.2k and 10.5k images) and achieved up to <strong>92.3% accuracy</strong> through rigorous data augmentation and class balancing. Optimizations reduced inference time by 25%, enabling efficient, real-time operation on conveyor-based robotic platforms. The modular design allows for easy adaptation to new fruit types and integration into existing agricultural automation systems.
       </p>
       <ul>
-        <li>Developed a real-time recognition pipeline combining Haar Cascade and CNN for high accuracy and low latency.</li>
-        <li>Tested across multiple lighting scenarios to ensure reliability in real-world environments.</li>
-        <li>Reduced computational load, making the system viable for edge and embedded devices.</li>
-        <li>Utilized Python scientific stack for data handling, model training, and visualization.</li>
+        <li>Trained on large, diverse datasets with advanced augmentation for improved generalization.</li>
+        <li>Achieved high accuracy in distinguishing between fresh and rotten fruits.</li>
+        <li>Reduced model inference time by 25% for real-time deployment.</li>
+        <li>Designed for seamless integration with robotic and conveyor systems.</li>
+        <li>Codebase is adaptable for other classification tasks in agriculture and food processing.</li>
       </ul>
     </div>
 
     <div class="tech-stack">
       <h2 class="section-heading">Future Prospects & Enhancements</h2>
       <p>
-        The Facial Recognition System is designed for extensibility and future growth. Planned and potential enhancements include:
+        The fruit detection system is built for scalability and continuous improvement. Planned and potential enhancements include:
       </p>
       <ul>
-        <li><strong>Multi-Face Tracking:</strong> Enable simultaneous recognition and tracking of multiple faces in crowded environments.</li>
-        <li><strong>Mask Detection:</strong> Integrate mask/no-mask detection to support health and safety compliance.</li>
-        <li><strong>Spoofing Prevention:</strong> Add liveness detection to prevent unauthorized access via photos or videos.</li>
-        <li><strong>Cloud Integration:</strong> Deploy as a microservice for scalable, API-driven facial recognition across applications.</li>
-        <li><strong>Mobile & Edge Deployment:</strong> Optimize for Android/iOS and low-power edge devices (e.g., Raspberry Pi, Jetson Nano).</li>
-        <li><strong>Privacy Controls:</strong> Implement privacy-preserving features such as on-device processing and user consent management.</li>
-        <li><strong>Continuous Learning:</strong> Allow the system to update and improve recognition accuracy as new data is collected.</li>
+        <li><strong>Multi-Class Classification:</strong> Extend detection to multiple fruit types and additional quality grades (e.g., overripe, bruised).</li>
+        <li><strong>Edge Deployment:</strong> Optimize models for deployment on embedded systems (Raspberry Pi, NVIDIA Jetson) for on-site processing.</li>
+        <li><strong>Real-Time Conveyor Integration:</strong> Integrate with PLCs and industrial robots for fully automated sorting lines.</li>
+        <li><strong>Defect Localization:</strong> Implement bounding box regression to localize and highlight rotten areas on fruits.</li>
+        <li><strong>Cloud-Based Analytics:</strong> Aggregate sorting data for trend analysis and supply chain optimization.</li>
+        <li><strong>Mobile App Interface:</strong> Develop a companion app for remote monitoring and manual override.</li>
+        <li><strong>Self-Learning System:</strong> Allow the model to improve with continuous data collection from production lines.</li>
       </ul>
 
       <h2 class="section-heading">Potential Use Cases</h2>
       <ul>
-        <li><strong>Access Control:</strong> Secure entry to offices, labs, or restricted areas using facial authentication.</li>
-        <li><strong>Attendance Systems:</strong> Automate employee or student attendance with minimal manual intervention.</li>
-        <li><strong>Smart Devices:</strong> Personalize user experiences on phones, tablets, or kiosks.</li>
-        <li><strong>Public Safety:</strong> Integrate with surveillance systems for missing person identification or watchlist alerts.</li>
+        <li><strong>Fruit Packing Plants:</strong> Automate quality control and reduce manual inspection costs.</li>
+        <li><strong>Supermarkets & Warehouses:</strong> Sort and remove spoiled produce before shelving.</li>
+        <li><strong>Food Processing Units:</strong> Ensure only high-quality inputs enter the production chain.</li>
+        <li><strong>Smart Farms:</strong> Integrate with IoT sensors and robotics for fully automated harvesting and sorting.</li>
       </ul>
 
       <h2 class="section-heading">Broader Impact</h2>
       <ul>
-        <li><strong>Enhance Security:</strong> Reduce reliance on passwords and physical keys, lowering risk of unauthorized access.</li>
-        <li><strong>Promote Responsible AI:</strong> Demonstrate privacy-aware, ethical facial recognition practices.</li>
-        <li><strong>Enable Accessibility:</strong> Support touchless authentication for improved hygiene and accessibility.</li>
-        <li><strong>Open Source Collaboration:</strong> Encourage contributions and peer review to improve fairness and accuracy.</li>
+        <li><strong>Reduce Food Waste:</strong> Early detection of spoilage helps minimize waste and improve supply chain efficiency.</li>
+        <li><strong>Enhance Food Safety:</strong> Prevents rotten produce from reaching consumers, improving public health.</li>
+        <li><strong>Empower Small Farmers:</strong> Low-cost automation solutions make advanced quality control accessible to all.</li>
+        <li><strong>Promote AI in Agriculture:</strong> Demonstrates practical, impactful uses of AI in the agri-food sector.</li>
       </ul>
 
       <h2 class="section-heading">Deployment & DevOps Readiness</h2>
       <ul>
-        <li><strong>Containerization (Planned):</strong> Package the system in Docker containers for seamless deployment.</li>
-        <li><strong>CI/CD Pipeline (Planned):</strong> Automate testing and deployment using platforms like GitHub Actions or Jenkins.</li>
-        <li><strong>API-First Design:</strong> Expose facial recognition as a RESTful API for easy integration.</li>
-        <li><strong>Edge & Cloud Flexibility:</strong> Support both on-premise and cloud-based deployments.</li>
+        <li><strong>Containerization (Planned):</strong> Package models and inference pipeline in Docker containers for easy deployment.</li>
+        <li><strong>CI/CD Pipeline (Planned):</strong> Automate model retraining, testing, and deployment using modern DevOps tools.</li>
+        <li><strong>API Integration:</strong> Expose detection results as RESTful APIs for seamless integration with industrial controllers.</li>
+        <li><strong>Edge & Cloud Flexibility:</strong> Support both on-premise and cloud-based deployments for maximum adaptability.</li>
       </ul>
     </div>
 

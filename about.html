@@ -5,71 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About - Sugyani</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
+
   <style>
     html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #fff5f8;
-      background-image: url('images/pinkstars.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      min-height: 100vh;
-      padding-top: 20px;
-    }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      padding: 15px 10px;
-      position: relative;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    header a {
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 20px;
-      background-color: #ffd1dc;
-      color: #000;
-      font-weight: bold;
-      transition: background-color 0.3s, font-size 0.3s, padding 0.3s;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      flex-shrink: 0;
-      min-width: 80px;
-      max-width: 160px;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
-    header a:hover {
-      background-color: #ffb6c1;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        justify-content: flex-start;
-        padding-left: 10px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
       }
-    }
+
+      .bg-image {
+        background-image: url("images/pinkstars.jpg");
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        color: #000;
+        text-align: center;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        padding: 15px 10px;
+        position: relative;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      header a {
+        text-decoration: none;
+        padding: 8px 14px;
+        border-radius: 20px;
+        background-color: #ffd1dc;
+        color: #000;
+        font-weight: bold;
+        transition: background-color 0.3s, font-size 0.3s, padding 0.3s;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-shrink: 0;
+        min-width: 80px;
+        max-width: 160px;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      header a:hover {
+        background-color: #ffb6c1;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          justify-content: flex-start;
+          padding-left: 10px;
+        }
+      }
 
     /* Center the about-box vertically and horizontally */
     .center-container {
@@ -220,6 +221,7 @@
   </style>
 </head>
 <body>
+  <div class="bg-image">
   <header>
     <a href="index.html">Go Back</a>
     <a href="skills.html">Skills</a>
@@ -269,7 +271,7 @@
       </div>
     </div>
   </div>
-
+</div>
   <script>
   let lastScrollTop = 0;
   const header = document.querySelector('header');
